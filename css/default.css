@@ -1,0 +1,181 @@
+* {
+    margin:0;
+    padding:0;
+}
+[contenteditable="true"]:active,
+[contenteditable="true"]:focus{
+border:none;
+outline:none;
+}
+
+body {
+    background: #cccccc;
+}
+
+#wrapper {
+    padding-top: 2em;
+}
+#header-container {
+    background: #4d4d4d;
+    color:  #d9d9d9;
+    font-size: 1.3rem;
+}
+hr {
+    background: #d9d9d9;
+}
+.no-notes {
+    display: none;
+    font-size: 1.7rem;
+    color: #f2f2f2;
+}
+#notes-container {
+    background-color: #d9d9d9;
+}
+.note {
+    font-family: 'Dancing Script';
+    font-weight: 700;
+    background-color: gold;
+    height: 100%;
+    padding: 0;
+    font-size: 1.5rem;
+    border-radius: 11px;
+    box-shadow: 10px 10px 5px 0px rgba(107,102,107,1);
+}
+.note-header {
+    padding: 10px 15px;
+}
+.note-title {
+    width: 90%;
+}
+.note-date {
+    font-size: 1.1rem;
+    /* float: right; */
+    position: absolute;
+    bottom: 20px;
+    right: 10px;
+    padding-right: 10px;
+}
+.note-body {
+    border-top: 1px solid #000000;
+    padding: 10px 15px 25px 10px;
+    min-height: 350px; 
+}
+.note-body [contenteditable="true"]:active,
+.note-body[contenteditable="true"]:focus{
+    border-top: 1px solid #000000;
+    outline:none;
+}
+#saveButton {
+    float: right;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+.delete i{
+    cursor: pointer;
+}
+
+/* BOUNCE OUT RIGHT ANIMATION */
+.animated {
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+ }
+ .bounce-in-animated {
+    -webkit-animation-duration: 1.2s;
+    animation-duration: 1.2s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+ }
+
+ @-webkit-keyframes bounceOutRight {
+    0% {
+       -webkit-transform: translateX(0);
+    }
+    20% {
+       opacity: 1;
+       -webkit-transform: translateX(-20px);
+    }
+    100% {
+       opacity: 0;
+       -webkit-transform: translateX(2000px);
+    }
+ }
+
+ @keyframes bounceOutRight {
+    0% {
+       transform: translateX(0);
+    }
+    20% {
+       opacity: 1;
+       transform: translateX(-20px);
+    }
+    100% {
+       opacity: 0;
+       transform: translateX(2000px);
+    }
+ }
+
+ .bounceOutRight {
+    -webkit-animation-name: bounceOutRight;
+    animation-name: bounceOutRight;
+ }
+
+ /* BOUNCE IN ANIMATION */
+ @-webkit-keyframes bounceInUp {
+    0% {
+       opacity: 0;
+       -webkit-transform: translateY(100px);
+    }
+    60% {
+       opacity: 1;
+       -webkit-transform: translateY(-30px);
+    }
+    80% {
+       -webkit-transform: translateY(10px);
+    }
+    100% {
+       -webkit-transform: translateY(0);
+    }
+ }
+ 
+ @keyframes bounceInUp {
+    0% {
+       opacity: 0;
+       transform: translateY(100px);
+    }
+    60% {
+       opacity: 1;
+       transform: translateY(-30px);
+    }
+    80% {
+       transform: translateY(10px);
+    }
+    100% {
+       transform: translateY(0);
+    }
+ }
+ 
+ .bounceInUp {
+    -webkit-animation-name: bounceInUp;
+    animation-name: bounceInUp;
+ }
+
+ @media (max-width: 576px) { 
+     h1 {
+         font-size: 1.3rem;
+     }
+     #header-container div ,
+     #header-container p{
+         font-size: 1rem;
+     }
+     .note {
+         font-size: 1.2rem;
+     }
+     .note-body {
+         min-height: 200px;
+     }
+     .note-date {
+         font-size: 1rem;
+     }
+  }

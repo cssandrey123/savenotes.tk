@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Save notes</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" type="text/css" href="css\bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css\bootstrap.custome.css">
+	<link rel="stylesheet" type="text/css" href="css\default.css">
+
+	<link href="https://fonts.googleapis.com/css?family=Dancing+Script:400,700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+
+</head>
+<body>
+
+	<div class="container-fluid" id="wrapper">
+		<!-- Header -->
+		<div class="container text-center pt-3" id="header-container">
+			<h1 class="text-center">PERSONAL NOTES</h1>
+			<div class="d-inline-block">
+				<hr>
+				This website was created to help you save your notes. It works based on browser local storage.
+				<br>
+				PS: Did you know that in 1974, Arthur Fry created Post-it-Notes (Sticky Notes) as a way of holding bookmarks in his hymnal while singing in the church choir?
+				<hr>
+			</div>
+			<div class="pb-3">
+				<p class="no-notes" id="no-notes-p">You didn't save any notes yet. To do that, click the button below</p>
+				<button class="btn btn-danger" data-toggle="modal" data-target="#staticBackdrop">New Note</button>
+			</div>
+		</div>
+
+		<!-- Notes component -->
+		<div class="container" id="notes-container">
+			<div class="row" id="notes-row">
+				
+			</div>
+		</div>
+
+		<!-- Modal -->
+		<div class="modal fade" id="staticBackdrop" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+				<h5 class="modal-title" id="staticBackdropLabel">New Note</h5>
+				<button type="button" class="close" data-dismiss="modal"  aria-label="Close">
+					<span aria-hidden="true" id="modal-close-btn">&times;</span>
+				</button>
+				</div>
+				<div class="modal-body">
+					<form>
+						<div class="form-group">
+						  <label for="recipient-name" class="col-form-label">Note title:</label>
+						  <input type="text" required="true" autocorrect="off" class="form-control" id="modal-note-title">
+						</div>
+						<div class="form-group">
+						  <label for="message-text" class="col-form-label">Note message:</label>
+						  <textarea class="form-control" autocorrect="off" id="modal-note-message"></textarea>
+						</div>
+					</form>
+				</div>
+				<div class="modal-footer">
+				<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+				<button type="button" class="btn btn-danger" data-dismiss="modal" onclick="saveNote()" >Save note</button>
+				</div>
+			</div>
+			</div>
+		</div>
+
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="script\default.js"></script>
+</body>
+</html>

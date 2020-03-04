@@ -1,0 +1,59 @@
+/* Modal */
+.modal-content {
+    font-family: 'Dancing Script';
+    font-weight: 700;
+    background: gold;
+    border-radius: 11px;
+}
+.modal-content h5 {
+    font-size: 1.8rem;
+}
+.modal-header {
+    border-bottom: 1px solid #000000;
+}
+.modal-body input,
+.modal-body textarea {
+    font-size: 1.4rem;
+}
+.modal-body textarea {
+    min-height: 180px;
+}
+.form-control:focus {
+    box-shadow: none;
+    color: #000000;
+    border-color: #dc3545;
+}
+.modal-footer {
+    border-top: 1px solid #000000
+}
+.modal-footer button {
+    font-size: 1.3rem;
+}
+.close {
+    opacity: 1.0;
+    font-family: initial;
+    font-size: 2rem;
+}
+.close:focus {
+    outline: none!important;
+}
+.col-form-label {
+    font-size: 1.5rem;
+}
+/* Modal END */
+
+@media (max-width: 576px) {
+    .modal-content h5 {
+        font-size: 1.3rem;
+    }
+    .modal-body input,
+    .modal-body textarea {
+        font-size: 1.2rem;
+    }
+    .col-form-label {
+        font-size: 1.2rem;
+    }
+    .modal-footer button {
+        font-size: 1.1rem;
+    }
+}
